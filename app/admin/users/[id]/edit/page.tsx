@@ -1,9 +1,9 @@
 "use client";
 
+import * as React from "react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import React from "react";
 
 type User = {
   _id: string;
@@ -12,13 +12,13 @@ type User = {
   role: "user" | "admin";
 };
 
-type PageParams = {
-  params: { id: string };
-};
-
-export default function EditUserPage({ params }: PageParams) {
+export default function EditUserPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const router = useRouter();
-  const userId = params.id;
+  const { id: userId } = React.use(params);
   const [formData, setFormData] = useState<User & { password: string }>({
     _id: "",
     name: "",
