@@ -1,0 +1,25 @@
+/* Form input stilleri */
+input, textarea, select {
+  color: #000000 !important; /* Tam siyah renk */
+  background-color: #f0f4f8 !important; /* Hafif mavi tonu */
+  font-weight: 500 !important; /* Biraz daha kalın yazı */
+}
+
+input::placeholder, 
+textarea::placeholder {
+  color: #4c566a !important; /* Nord tema orta koyu renk */
+  opacity: 1 !important;
+}
+
+/* Sayfa arkaplan rengi */
+body {
+  background-color: #eceff4 !important; /* Nord tema açık mavi tonu */
+}
+
+/* Formlarda kırmızı çizgi düzeltmesi */
+input:not([type=submit]):not([type=file]):focus, 
+textarea:focus, 
+select:focus {
+  box-shadow: 0 0 0 1px #f1953e !important;
+  border-color: #f1953e !important;
+} 

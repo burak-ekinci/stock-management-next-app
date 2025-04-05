@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ekinci Elektronik - Stok Yönetim Sistemi
 
-## Getting Started
+Ekinci Elektronik firması için geliştirilmiş, bilgisayar bataryaları için özel stok yönetim sistemi.
 
-First, run the development server:
+## 🚀 Özellikler
+
+- 👤 Kullanıcı kaydı ve girişi (NextAuth.js)
+- 👑 Admin ve normal kullanıcı rolleri
+- 📦 Ürün, marka ve model yönetimi
+- 🔍 Modele göre ürün filtreleme
+- 📊 Stok durumu takibi
+- 📱 Mobil uyumlu tasarım
+- 🔐 Güvenli şifre yönetimi (bcrypt)
+- 🗃️ MongoDB veri tabanı entegrasyonu
+
+## 🛠 Teknolojiler
+
+- [Next.js 15](https://nextjs.org/) - React Framework
+- [TypeScript](https://www.typescriptlang.org/) - Tip Güvenliği
+- [MongoDB](https://www.mongodb.com/) - Veri Tabanı
+- [Mongoose](https://mongoosejs.com/) - MongoDB ODM
+- [NextAuth.js](https://next-auth.js.org/) - Kimlik Doğrulama
+- [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
+
+## 🏁 Başlangıç
+
+Bu projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
+
+1. Repoyu klonlayın
+
+```bash
+git clone https://github.com/kullanici/ekinci-elektronik.git
+cd ekinci-elektronik
+```
+
+2. Bağımlılıkları yükleyin
+
+```bash
+npm install
+# veya
+yarn install
+```
+
+3. .env.local dosyasını oluşturun
+
+```bash
+cp .env.local.example .env.local
+```
+
+4. .env.local dosyasını kendi bilgilerinizle düzenleyin:
+
+- MongoDB bağlantı bilgilerinizi
+- NextAuth secret key
+- (Opsiyonel) İlk admin kullanıcı bilgilerinizi
+
+5. Geliştirme sunucusunu başlatın
 
 ```bash
 npm run dev
-# or
+# veya
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açarak uygulamayı görebilirsiniz.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Proje Yapısı
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+/app
+  /api               # API Endpoint'leri
+    /auth            # Kimlik doğrulama
+    /products        # Ürün işlemleri
+    /brands          # Marka işlemleri
+  /components        # Yeniden kullanılabilir bileşenler
+  /models            # Mongoose veri modelleri
+  /lib               # Yardımcı fonksiyonlar ve bağlantılar
+  /admin             # Yönetici paneli
+  /products          # Ürün sayfaları
+  /auth              # Giriş/Kayıt sayfaları
+```
 
-## Learn More
+## 📋 Yapılacaklar
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Ürün resimleri için yükleme sistemi
+- [ ] Sipariş yönetimi
+- [ ] İstatistik ve raporlama
+- [ ] Daha gelişmiş arama ve filtreleme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Lisans
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Bu proje [MIT](LICENSE) lisansı altında lisanslanmıştır.
 
-## Deploy on Vercel
+## 🙏 Teşekkürler
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bu projenin geliştirilmesine katkı sağlayan herkese teşekkürler!
